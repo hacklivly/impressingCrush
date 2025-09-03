@@ -22,7 +22,7 @@
 </head>
 <body>
 <!-- 🎶 Background Music -->
-<audio id="bg-music" autoplay loop>
+<audio id="bg-music" autoplay loop muted>
   <source src="https://www.bensound.com/bensound-music/bensound-buddy.mp3" type="audio/mpeg">
 </audio>
 <button id="music-toggle">🔊</button>
@@ -127,6 +127,15 @@
   const music = document.getElementById("bg-music");
   const toggleBtn = document.getElementById("music-toggle");
 
+  // 🔥 Auto start music unmuted
+  window.addEventListener("load", () => {
+    music.muted = false;
+    music.play().catch(err => {
+      console.log("Autoplay blocked, will start on first interaction");
+    });
+  });
+
+  // 🎚️ Toggle button
   toggleBtn.addEventListener("click", () => {
     if (music.paused) {
       music.play();
