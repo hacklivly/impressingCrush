@@ -3,111 +3,139 @@
 <head>
   <meta charset="UTF-8">
   <title>Happy Teachers day ❤️</title>
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Short+Stack&amp;family=Homemade+Apple&amp;display=swap'><link rel="stylesheet" href="./style.css">
-
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Short+Stack&amp;family=Homemade+Apple&amp;display=swap'>
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    #music-toggle {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      font-size: 20px;
+      background: #fff;
+      border: none;
+      border-radius: 50%;
+      padding: 10px 14px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+  </style>
 </head>
 <body>
+<!-- 🎶 Background Music -->
+<audio id="bg-music" autoplay loop>
+  <source src="https://www.bensound.com/bensound-music/bensound-buddy.mp3" type="audio/mpeg">
+</audio>
+<button id="music-toggle">🔊</button>
+
 <!-- partial:index.partial.html -->
 <!-- A pen by Developer Rahul  -->
-<div class="paper heart">
+<div class="paper heart"></div>
 
-</div>
-
- <div class="paper image">
-  <p</p>
+<div class="paper image">
+  <p></p>
   <img src="images/2.jpeg" />
 </div>
   
 <div class="paper image">
   <p> and I just wanted to say</p>
-    <p>Happy Birthday 😍 </p>
-   <img src="images/1.jpeg" />
+  <p>Happy Birthday 😍 </p>
+  <img src="images/1.jpeg" />
 </div>
 
-   <div class="paper image">
-  <p</p>
+<div class="paper image">
+  <p></p>
   <img src="images/2.jpeg" />
 </div>
-  
+
 <div class="paper image">
   <p> and I just wanted to say</p>
-    <p>Happy Birthday 😍 </p>
-   <img src="images/1.jpeg" />
+  <p>Happy Birthday 😍 </p>
+  <img src="images/1.jpeg" />
 </div>
-   <div class="paper image">
-  <p</p>
+
+<div class="paper image">
+  <p></p>
   <img src="images/2.jpeg" />
 </div>
-  
+
 <div class="paper image">
   <p> and I just wanted to say</p>
-    <p>Happy Birthday 😍 </p>
-   <img src="images/1.jpeg" />
+  <p>Happy Birthday 😍 </p>
+  <img src="images/1.jpeg" />
 </div>
 
-   <div class="paper image">
-  <p</p>
+<div class="paper image">
+  <p></p>
   <img src="images/2.jpeg" />
 </div>
-  
+
 <div class="paper image">
   <p> and I just wanted to say</p>
-    <p>Happy Birthday 😍 </p>
-   <img src="images/1.jpeg" />
+  <p>Happy Birthday 😍 </p>
+  <img src="images/1.jpeg" />
 </div>
 
-  
 <div class="paper image">
-  <p</p>
+  <p></p>
   <img src="images/2.jpeg" />
 </div>
-  
+
 <div class="paper image">
   <p> and I just wanted to say</p>
-    <p>Happy Birthday 😍 </p>
-   <img src="images/1.jpeg" />
+  <p>Happy Birthday 😍 </p>
+  <img src="images/1.jpeg" />
 </div>
-  
+
 <div class="paper image">
-  <p</p>
+  <p></p>
   <img src="images/2.jpeg" />
 </div>
-  
+
 <div class="paper image">
   <p> and I just wanted to say</p>
-    <p>Happy Birthday 😍 </p>
-   <img src="images/1.jpeg" />
+  <p>Happy Birthday 😍 </p>
+  <img src="images/1.jpeg" />
 </div>
 
 <div class="paper image">
-  <p</p>
+  <p></p>
   <img src="images/2.jpeg" />
 </div>
 
 <div class="paper image">
-  <p>How can be  </p>
-   <p> someone so good ❤️ </p>
-
+  <p>How can be</p>
+  <p>someone so good ❤️</p>
   <img src="images/3.jpg" />
 </div>
 
-
-
 <div class="paper red">
-<p class="p1"> but have a heart of gold </p>
-<p class="p2">Person 😍</p>
+  <p class="p1"> but have a heart of gold </p>
+  <p class="p2">Person 😍</p>
 </div>
 
 <div class="paper">
-<p class="p1">You are average in looks </p>
+  <p class="p1">You are average in looks </p>
   <p class="p1">Amazing <span style="color: red !important;">❤️</span></p>
 </div>
 
 <div class="paper">
-<p class="p1">Drag the papers to move!</p>
+  <p class="p1">Drag the papers to move!</p>
 </div>
 <!-- partial -->
-  <script  src="./mobile.js"></script>
+<script src="./mobile.js"></script>
+<script>
+  const music = document.getElementById("bg-music");
+  const toggleBtn = document.getElementById("music-toggle");
 
+  toggleBtn.addEventListener("click", () => {
+    if (music.paused) {
+      music.play();
+      toggleBtn.textContent = "🔊";
+    } else {
+      music.pause();
+      toggleBtn.textContent = "🔇";
+    }
+  });
+</script>
 </body>
 </html>
